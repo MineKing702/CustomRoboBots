@@ -1,5 +1,6 @@
 using Robocode.TankRoyale.BotApi;
 using Robocode.TankRoyale.BotApi.Events;
+using Robocode.TankRoyale.BotApi.Graphics;
 
 // ------------------------------------------------------------------
 // MyFirstBot
@@ -20,6 +21,8 @@ public class WylieMaier : Bot
     // Called when a new round is started -> initialize and do some movement
     public override void Run()
     {
+        SetBotColors();
+
         // Repeat while the bot is running
         while (IsRunning)
         {
@@ -44,5 +47,15 @@ public class WylieMaier : Bot
 
         // Turn 90 degrees to the bullet direction based on the bearing
         TurnRight(90 - bearing);
+    }
+
+    void SetBotColors()
+    {
+        BodyColor = Color.Wheat;
+        RadarColor = Color.Yellow;
+        ScanColor = Color.Yellow;
+        TracksColor = Color.White;
+        TurretColor = Color.Yellow;
+        // make bullets wylies fav color
     }
 }
