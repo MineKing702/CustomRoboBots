@@ -14,7 +14,6 @@ public class CornerMovement : Bot
     Vector2 lastTargetPos = Vector2.Zero;
     bool atTarget = false;
 
-
     // our bots current position
     Vector2 position;
     Vector2 targetPos;
@@ -25,7 +24,6 @@ public class CornerMovement : Bot
     {
         new CornerMovement().Start();
     }
-
     public override void Run()
     {
         arenaHeight = StartEvt.GameSetup.ArenaHeight;
@@ -50,8 +48,6 @@ public class CornerMovement : Bot
             Go();
         }
     }
-
-
     public override void OnGameStarted(GameStartedEvent evt)
     {
         StartEvt = evt;
@@ -66,8 +62,6 @@ public class CornerMovement : Bot
         // Restart infinite radar sweep
         SetTurnRadarRight(double.PositiveInfinity);
     }
-
-
     public override void OnScannedBot(ScannedBotEvent evt)
     {
         int oldQuadrant = enemyQuadrant;
@@ -92,13 +86,6 @@ public class CornerMovement : Bot
             Console.WriteLine($"target x: {targetPos.X} and target y: {targetPos.Y}");
         }
     }
-
-
-    public override void OnHitByBullet(HitByBulletEvent evt)
-    {
-
-    }
-
 
     void MoveToTarget(Vector2 target)
     {
@@ -143,8 +130,6 @@ public class CornerMovement : Bot
         SetTurnRight(0); // ensure no residual turning
         SetForward(distance);
     }
-
-
 
     // Normalize an angle to -180..180 degrees
     double NormalizeBearing(double angle)
