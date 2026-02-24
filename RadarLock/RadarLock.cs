@@ -30,7 +30,6 @@ public class RadarLock : Bot
     // We saw another bot -> fire!
     public override void OnScannedBot(ScannedBotEvent evt)
     {
-        
         double radarTurn = RadarBearingTo(evt.X, evt.Y);
         // Console.WriteLine($"I'm at x: {X}, y: {Y}; Scanned enemy bot at x: {evt.X}, y: {evt.Y}; Radar Direction: {RadarDirection}; Radar Turn: {radarTurn}");
 
