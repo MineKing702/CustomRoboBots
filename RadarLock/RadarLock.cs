@@ -31,7 +31,7 @@ public class RadarLock : Bot
     public override void OnScannedBot(ScannedBotEvent evt)
     {
         double radarTurn = RadarBearingTo(evt.X, evt.Y);
-        // Console.WriteLine($"I'm at x: {X}, y: {Y}; Scanned enemy bot at x: {evt.X}, y: {evt.Y}; Radar Direction: {RadarDirection}; Radar Turn: {radarTurn}");
+        Console.WriteLine($"I'm at x: {X}, y: {Y}; Scanned enemy bot at x: {evt.X}, y: {evt.Y}; Radar Direction: {RadarDirection}; Radar Turn: {radarTurn}");
 
         radarTurn += Math.Sign(radarTurn) * 5; // 5° overshoot
         SetTurnRadarLeft(radarTurn);
