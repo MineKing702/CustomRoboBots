@@ -76,6 +76,7 @@ public class WylieMaier : Bot
         // Radar Lock
         double radarTurn = Utils.NormalRelativeAngle(absBearing - (RadarDirection * Math.PI / 180.0));
         SetTurnRadarLeft(radarTurn * (180.0 / Math.PI) * 2);
+        Console.WriteLine($"I'm at x: {X}, y: {Y}; Scanned enemy bot at x: {e.X}, y: {e.Y}; Radar Direction: {RadarDirection}; Radar Turn: {radarTurn}");
 
         // Store Surfing Data
         _surfDirections.Insert(0, lateralVelocity >= 0 ? 1 : -1);
