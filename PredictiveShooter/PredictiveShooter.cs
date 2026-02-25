@@ -148,7 +148,7 @@ public class PredictiveShooter : Bot
         // -----------------------
         // Fire
         // -----------------------
-        if (GunTurnRemaining == 0 && GunHeat == 0)
+        if (Math.Abs(GunTurnRemaining) < 1 && GunHeat == 0)
         {
             SetFire(firePower);
         }
