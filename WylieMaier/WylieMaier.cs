@@ -49,9 +49,13 @@ public class WylieMaier : Bot
         AdjustRadarForBodyTurn = true;
 
         // Visuals
-        BodyColor = Color.Cyan;
-        GunColor = Color.Blue;
-        RadarColor = Color.White;
+        BodyColor = Color.Tan;
+        GunColor = Color.Gold;
+        RadarColor = Color.Gold;
+        ScanColor = Color.Yellow;
+        TracksColor = Color.Gray;
+        TurretColor = Color.Gold;
+        BulletColor = Color.Red;
 
         // Infinite Radar Lock
         while (IsRunning)
